@@ -1,4 +1,4 @@
 version: 0.1.0
-name: joaopedropp-app
+name: node
 apiVersion: v1
 description: This is a lab to get a better understadning of how to use a set of tool to deploy cloud native app
