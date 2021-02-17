@@ -1,0 +1,20 @@
+global:
+  # ingressSubdomain: <dev-cluster-name>.us-south.containers.appdomain.cloud
+  ingressSubdomain: cloudnativetoolkit-001-0e3e0ef4c9c6d831e8aa6fe01f33bfc4-0000.us-east.containers.appdomain.cloud
+  tlsSecretName: cloudnativetoolkit-001-0e3e0ef4c9c6d831e8aa6fe01f33bfc4-0000
+
+# replace <app-chart-name> with the value given in requirements.yaml
+joaopedropp-app:
+  # provides values from the values.yaml in the <app-chart-name> helm chart
+  replicaCount: 1
+  
+  # For OpenShift set route.enabled=true
+  # For Kubernetes set route.enabled=false
+  route:
+    enabled: true
+  
+  # For OpenShift set ingress.enabled=false
+  # For Kubernetes set ingress.enabled=true
+  ingress:
+    enabled: false
+    tlsSecretName: cloudnativetoolkit-001-0e3e0ef4c9c6d831e8aa6fe01f33bfc4-0000
